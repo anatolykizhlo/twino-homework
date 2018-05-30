@@ -1,0 +1,17 @@
+<form>
+  <app-input
+    label="Email address"
+    placeholder="Your email"
+    [value]="email"
+    name="email"
+    [formGroup]="priceForm"
+  ></app-input>
+  <app-input
+    label="Choose the price"
+    type="radio"
+    [value]="priceOptions"
+    name="price"
+    [formGroup]="priceForm"
+  ></app-input>
+  <app-button responsive (click)="onSend()" [class.disabled]="priceForm.invalid">Send</app-button>
+</form>

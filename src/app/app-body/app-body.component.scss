@@ -1,0 +1,9 @@
+@import "~src/styles/variables.scss";
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: $app-padding-ends 0;
+  background: color(grey-light);
+}

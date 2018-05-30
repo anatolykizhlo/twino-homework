@@ -1,0 +1,54 @@
+@import "~src/styles/variables.scss";
+
+:host {
+  display: block;
+  padding: 13px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: box-shadow 300ms;
+  text-align: center;
+  margin: auto;
+
+  .content--big, .content--small  {
+    display: none;
+  }
+
+  &[switching] {
+    border: 1px solid #fff;
+
+    .content--big {
+      display: block;
+    }
+  }
+
+  &[responsive] {
+    width: 50%;
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 7px 0 rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media (max-width: screen(small)) {
+
+  :host {
+
+    &[switching] {
+      border: none;
+
+      .content--big {
+        display: none;
+      }
+
+      .content--small {
+        display: block;
+      }
+    }
+
+    &[responsive] {
+      width: auto;
+    }
+  }
+}

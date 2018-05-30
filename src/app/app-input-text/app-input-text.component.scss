@@ -1,0 +1,24 @@
+@import "~src/styles/variables.scss";
+
+:host {
+  display: block;
+
+  input {
+    line-height: 56px;
+    height: 60px;
+    display: block;
+    border: 2px solid color(grey-dark);
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 25px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: none;
+    font: inherit;
+
+    &.ng-touched.ng-invalid {
+      border-color: color(red);
+    }
+  }
+}

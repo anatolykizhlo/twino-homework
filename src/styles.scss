@@ -1,0 +1,12 @@
+@import "styles/icons";
+@import "styles/fonts";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font: 400 1em Barlow, sans-serif;
+  min-width: 320px; /*iPhone 5/SE*/
+  overflow-y: auto;
+}

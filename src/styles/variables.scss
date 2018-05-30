@@ -1,0 +1,48 @@
+$colors: (
+  yellow: #FFB300,
+  black: #212121,
+  red: #F4511E,
+  purple: #4527A0,
+  grey-light: #FAFAFA,
+  grey-dark: #EEEEEE,
+  grey-very-dark: #B0BEC5
+);
+
+$screens: (
+  small: 414px, /*iPhone plus*/
+  medium: 720px
+);
+
+$app-padding-sides: 10%;
+$app-padding-ends: 80px;
+
+@function screen($key) {
+  @return map-get($screens, $key);
+}
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@mixin modal() {
+  :host {
+    display: block;
+    width: 100%;
+
+    app-button {
+      color: color(red);
+      font-weight: 400;
+    }
+
+    app-icon {
+      color: color(red);
+      font-size: 2em;
+      margin: 25px 0 35px;
+    }
+
+    .title {
+      font-size: 2em;
+      text-align: center;
+    }
+  }
+}

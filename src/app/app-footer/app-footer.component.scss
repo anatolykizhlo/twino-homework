@@ -1,0 +1,12 @@
+@import "~src/styles/variables.scss";
+
+:host {
+  display: block;
+  padding: 0 $app-padding-sides;
+  height: $app-padding-ends;
+  margin-top: -$app-padding-ends;
+  background: color(grey-dark);
+  line-height: $app-padding-ends;
+  text-align: center;
+  font-size: 0.8em;
+}

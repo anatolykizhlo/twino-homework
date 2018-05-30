@@ -1,0 +1,17 @@
+<div class="title">
+  Upload your files
+</div>
+<div class="drop-zone" [class.drop-zone--active]="zoneIsActive">
+  <div class="drop-zone__text" *ngIf="fileName"><span>{{fileName}}</span> is selected <span>({{fileSize}} MB)</span></div>
+  <app-icon name="upload"></app-icon>
+  <div class="drop-zone__title">Drop your files here</div>
+  <div class="drop-zone__text">or choose from your <span>computer</span></div>
+  <input
+    type="file"
+    (change)="fileChange()"
+    #fileInput
+    (dragenter)="onDragEnter()"
+    (dragleave)="onDragLeave()"
+    (drop)="onDrop()">
+</div>
+<app-button clear (click)="close()">Close</app-button>

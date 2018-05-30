@@ -1,0 +1,5 @@
+<div class="background" (click)="close()"></div>
+<div class="content">
+  <app-modal-upload *ngIf="type=='upload'" [destroyFn]="destroyFn"></app-modal-upload>
+  <app-modal-success *ngIf="type=='success'" [destroyFn]="destroyFn" [data]="data"></app-modal-success>
+</div>

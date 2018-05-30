@@ -1,0 +1,50 @@
+@import "~src/styles/variables.scss";
+
+@include modal();
+
+:host {
+
+  .drop-zone {
+    position: relative;
+    color: color(grey-very-dark);
+    padding: 25px;
+    border: 3px dashed color(grey-very-dark);
+    border-radius: 10px;
+    margin: 50px 0 30px;
+    text-align: center;
+    transition: border 300ms;
+    line-height: 1.2em;
+    overflow: hidden;
+
+    &__title {
+      font-weight: 600;
+      font-size: 1em;
+    }
+
+    &__text {
+      font-size: 0.8em;
+
+      span {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+        color: color(red);
+        vertical-align: bottom;
+      }
+    }
+
+    &--active {
+      border-color: color(red);
+    }
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1000px;
+    opacity: 0;
+  }
+}

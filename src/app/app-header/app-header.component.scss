@@ -1,0 +1,25 @@
+@import "~src/styles/variables.scss";
+
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  height: $app-padding-ends;
+  background: color(yellow);
+  padding: 0 $app-padding-sides;
+  align-items: center;
+  box-sizing: border-box;
+
+  app-icon[name=logo] {
+    flex: 1;
+    font-size: 3em;
+    opacity: 0.5;
+  }
+
+  app-button:last-child {
+    margin-left: 10px;
+  }
+}

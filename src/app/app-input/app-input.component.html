@@ -1,0 +1,19 @@
+<ng-container [ngSwitch]="type">
+  <ng-container *ngSwitchCase="'text'">
+    <app-input-text
+      label="{{label}}"
+      placeholder="{{placeholder}}"
+      name="{{name}}"
+      [value]="value"
+      [formGroup]="formGroup"
+    ></app-input-text>
+  </ng-container>
+  <ng-container *ngSwitchCase="'radio'">
+    <app-input-radio
+      label="{{label}}"
+      name="{{name}}"
+      [value]="value"
+      [formGroup]="formGroup"
+    ></app-input-radio>
+  </ng-container>
+</ng-container>

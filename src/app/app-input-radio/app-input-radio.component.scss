@@ -1,0 +1,65 @@
+@import "~src/styles/variables.scss";
+
+:host {
+
+  .input-block__field {
+    display: flex;
+  }
+
+  input {
+    display: none;
+  }
+
+  .radio-option {
+    flex: 1;
+    cursor: pointer;
+
+    &:first-child .radio-option__label {
+      margin-right: 5px;
+    }
+
+    &:last-child .radio-option__label {
+      margin-left: 5px;
+    }
+
+    &__label {
+      position: relative;
+      display: block;
+      padding: 20px;
+      border-radius: 4px;
+      background: color(grey-dark);
+      margin-top: 5px;
+      text-align: center;
+      transition: background-color 300ms;
+
+      &__value {
+        font-size: 3em;
+
+        span {
+          font-size: 0.6em;
+          vertical-align: super;
+        }
+      }
+
+      &__dot {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #fff;
+        transition: background-color 300ms;
+      }
+    }
+  }
+
+  input:checked ~ .radio-option__label {
+    color: #fff;
+    background: color(red);
+  }
+
+  input:checked ~ .radio-option__label .radio-option__label__dot {
+    background: color(purple);
+  }
+}

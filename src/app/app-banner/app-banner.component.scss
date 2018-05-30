@@ -1,0 +1,36 @@
+@import "~src/styles/variables.scss";
+
+:host {
+  display: block;
+  font-size: 0;
+  text-align: center;
+  background: #fff;
+  padding: 50px $app-padding-sides;
+
+  .image {
+    width: 45%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 6vw;
+    width: 55%;
+  }
+}
+
+@media (max-width: screen(small)) {
+  :host {
+
+    .image {
+      width: 80%;
+      margin-bottom: 25px;
+    }
+
+    .text {
+      width: 100%;
+    }
+  }
+}

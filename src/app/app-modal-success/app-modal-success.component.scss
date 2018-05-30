@@ -1,0 +1,19 @@
+@import "~src/styles/variables.scss";
+
+@include modal();
+
+:host {
+
+  .title {
+    margin-bottom: 25px;
+  }
+
+  .text {
+    @extend .title;
+    text-align: left;
+
+    span {
+      color: color(red);
+    }
+  }
+}

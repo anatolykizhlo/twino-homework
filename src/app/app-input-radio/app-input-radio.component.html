@@ -1,0 +1,24 @@
+<div class="input-block" [formGroup]="formGroup">
+  <div class="input-block__label">{{label}}</div>
+  <div class="input-block__field">
+    <ng-container *ngFor="let option of value; let i = index; let first = first;">
+      <div class="radio-option">
+        <input
+          class="radio-option__input"
+          type="radio"
+          name="{{name}}"
+          id="{{name + i}}"
+          value="{{option.value}}"
+          formControlName="{{name}}"
+        >
+        <label class="radio-option__label" for="{{name + i}}">
+          <div class="radio-option__label__dot"></div>
+          <div class="radio-option__label__value">
+            <span>&euro;</span>{{option.value}}
+          </div>
+          <div class="radio-option__label__text">{{option.text}}</div>
+        </label>
+      </div>
+    </ng-container>
+  </div>
+</div>
